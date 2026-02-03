@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Page Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+        header {
+            height: 60px;
+            background-color: #333;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .content {
+            display: flex;
+            height: 300px;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .main {
+            flex: 1;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        footer {
+            height: 50px;
+            background-color: #333;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>Header</header>
+
+    <div class="content">
+        <div class="sidebar">Sidebar</div>
+        <div class="main">Main Content</div>
+    </div>
+
+    <footer>Footer</footer>
+
+</body>
+</html>
