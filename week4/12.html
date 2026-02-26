@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Responsive Layout</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;}
+.container{display:flex;min-height:100vh;}
+.left,.right{flex:1;padding:40px;}
+.left{background:#4a90e2;color:white;}
+.right{background:#f4f6f9;}
+h2{margin-top:0;}
+@media (max-width:768px){.container{flex-direction:column;}}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="left">
+<h2>Left Section</h2>
+<p>This section appears on the left in desktop view.</p>
+</div>
+<div class="right">
+<h2>Right Section</h2>
+<p>This section appears on the right in desktop view.</p>
+</div>
+</div>
+</body>

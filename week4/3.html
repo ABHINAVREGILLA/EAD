@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Feedback Form</title>
+<style>
+body{font-family:Arial,sans-serif;background-color:#f4f6f9;padding:40px;}
+h2{text-align:center;font-size:28px;}
+form{width:500px;margin:0 auto;padding:25px;background:#ffffff;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,0.1);}
+label{font-weight:bold;display:block;margin-top:15px;}
+input[type="text"],input[type="email"],textarea{width:100%;padding:10px;margin-top:5px;border:1px solid #ccc;border-radius:5px;font-size:16px;}
+textarea{height:150px;resize:none;}
+input:focus,textarea:focus{border:2px solid #4a90e2;outline:none;}
+button{margin-top:20px;padding:10px;width:100%;background:#4a90e2;color:white;border:none;border-radius:5px;font-size:16px;cursor:pointer;}
+button:hover{background:#357abd;}
+</style>
+</head>
+<body>
+<h2>Feedback Form</h2>
+<form>
+<label>Name:</label>
+<input type="text" name="name">
+<label>Email:</label>
+<input type="email" name="email">
+<label>Feedback:</label>
+<textarea name="feedback"></textarea>
+<label>How was your experience?</label>
+<input type="radio" name="satisfaction" value="Satisfied"> Satisfied<br>
+<input type="radio" name="satisfaction" value="Neutral"> Neutral<br>
+<input type="radio" name="satisfaction" value="Unsatisfied"> Unsatisfied<br>
+<button type="submit">Submit</button>
+</form>
+</body>
+</html>
