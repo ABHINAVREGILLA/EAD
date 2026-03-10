@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Callback Calculator</title>
+        <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.calculator {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    width: 280px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.calculator h3 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+}
+
+button {
+    width: 22%;
+    padding: 10px;
+    margin: 10px 1%;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #667eea;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #5a67d8;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.result {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    min-height: 24px;
+}
+
+.error {
+    color: #e63946;
+}
+            </style>
+    </head>
+    <body>
+
+<div class="calculator">
+    <h3>Callback Calculator</h3>
+
+    <input type="number" id="num1" placeholder="Enter First Number">
+    <input type="number" id="num2" placeholder="Enter Second Number">
+
+    <button onclick="performOperation('add')">+</button>
+    <button onclick="performOperation('subtract')">-</button>
+    <button onclick="performOperation('multiply')">*</button>
+    <button onclick="performOperation('divide')">/</button>
+
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+
+    // Arrow Functions (Operations)
+    const add = (a, b) => a + b;
+    const subtract = (a, b) => a - b;
+    const multiply = (a, b) => a * b;
+    const divide = (a, b) => {
+        if (b === 0) {
+            return "Cannot divide by zero";
+        }
+        return a / b;
+    };
+
+    // Higher Order Function (Callback)
+    function calculate(a, b, operationCallback) {
+        return operationCallback(a, b);
+    }
+
+    // Main Controller Function
+    function performOperation(type) {
+
+        let num1 = parseFloat(document.getElementById("num1").value);
+        let num2 = parseFloat(document.getElementById("num2").value);
+        let resultDiv = document.getElementById("result");
+
+        if (isNaN(num1) || isNaN(num2)) {
+            resultDiv.innerHTML = "Please enter valid numbers";
+            resultDiv.classList.add("error");
+            return;
+        }
+
+        let result;
+
+        switch(type) {
+            case "add":
+                result = calculate(num1, num2, add);
+                break;
+            case "subtract":
+                result = calculate(num1, num2, subtract);
+                break;
+            case "multiply":
+                result = calculate(num1, num2, multiply);
+                break;
+            case "divide":
+                result = calculate(num1, num2, divide);
+                break;
+        }
+
+        resultDiv.classList.remove("error");
+        resultDiv.innerHTML = "Result: " + result;
+    }
+
+</script>
+</body>
+</html>
