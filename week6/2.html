@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Student Registration Form</title>
+
+<!-- Bootstrap CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-5">
+
+<div class="row justify-content-center">
+<div class="col-md-8">
+
+<h2 class="text-center mb-4">Student Registration Form</h2>
+
+<!-- Bootstrap Alert -->
+<div class="alert alert-success" role="alert">
+Fill the form and submit your registration.
+</div>
+
+<form>
+
+<!-- Student Name -->
+<div class="mb-3">
+<label class="form-label">Student Name</label>
+<input type="text" class="form-control" placeholder="Enter your name">
+</div>
+
+<!-- Roll Number -->
+<div class="mb-3">
+<label class="form-label">Roll Number</label>
+<input type="text" class="form-control" placeholder="Enter roll number">
+</div>
+
+<!-- Email -->
+<div class="mb-3">
+<label class="form-label">Email</label>
+<input type="email" class="form-control" placeholder="Enter email">
+</div>
+
+<!-- Gender -->
+<div class="mb-3">
+<label class="form-label d-block">Gender</label>
+
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="gender">
+<label class="form-check-label">Male</label>
+</div>
+
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="gender">
+<label class="form-check-label">Female</label>
+</div>
+
+</div>
+
+<!-- Department -->
+<div class="mb-3">
+<label class="form-label">Department</label>
+<select class="form-select">
+<option selected>Select Department</option>
+<option>CSE</option>
+<option>ECE</option>
+<option>EEE</option>
+<option>Mechanical</option>
+<option>Civil</option>
+</select>
+</div>
+
+<!-- Subjects -->
+<div class="mb-3">
+<label class="form-label d-block">Subjects</label>
+
+<div class="form-check">
+<input class="form-check-input" type="checkbox">
+<label class="form-check-label">Mathematics</label>
+</div>
+
+<div class="form-check">
+<input class="form-check-input" type="checkbox">
+<label class="form-check-label">Physics</label>
+</div>
+
+<div class="form-check">
+<input class="form-check-input" type="checkbox">
+<label class="form-check-label">Computer Science</label>
+</div>
+
+</div>
+
+<!-- Upload Photo -->
+<div class="mb-3">
+<label class="form-label">Upload Photo</label>
+<input type="file" class="form-control">
+</div>
+
+<!-- Buttons -->
+<button type="submit" class="btn btn-primary">Submit</button>
+<button type="reset" class="btn btn-secondary">Reset</button>
+
+</form>
+
+</div>
+</div>
+
+</div>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
